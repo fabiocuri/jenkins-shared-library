@@ -10,8 +10,6 @@ class Docker implements Serializable {
     }
 
     def buildDockerImage(String imageName) {
-        script.sh "apt update"
-        script.sh "apt install docker.io"
         script.sh "docker"
         script.echo "Building the docker image..."
         script.sh "docker build -t $imageName ."
